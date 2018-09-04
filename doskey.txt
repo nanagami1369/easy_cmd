@@ -1,0 +1,23 @@
+ls=wsl ls $*
+ll=wsl ls -l $*
+la=wsl ls -l -a $*
+
+pwd=echo %CD%
+cat=type $*
+
+touch=wsl touch $*
+vim=wsl vim $*
+cp=wsl cp $*
+mv=wsl mv $*
+rm=wsl rm $*
+fish=wsl fish
+
+shutdown=shutdown /s /t 0
+reboot=shutdown /r /t 0
+
+ad=pushd $*
+add=popd $*
+~=pushd %HOME%\bat
+..=pushd ..
+
+exp=explorer $*
