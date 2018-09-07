@@ -1,6 +1,7 @@
 ls=wsl ls $*
 ll=wsl ls -l $*
 la=wsl ls -l -a $*
+clear=cls
 
 pwd=echo %CD%
 cat=type $*
