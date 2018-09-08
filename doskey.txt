@@ -13,9 +13,6 @@ mv=wsl mv $*
 rm=wsl rm $*
 fish=wsl fish
 
-shutdown=shutdown /s /t 0
-reboot=shutdown /r /t 0
-
 ad=pushd $*
 add=popd $*
 ~=pushd %HOME%\bat
