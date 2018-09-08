@@ -8,5 +8,5 @@ REM 挨拶文
 echo %green%Welcome to my cmd.exe%default%
 
 REM エイリアスファイル
-doskey /macrofile=%HOME%/bat/doskey.txt
+doskey /macrofile=%OneDrive%/vscode/bat/doskey.txt
 endlocal
