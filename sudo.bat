@@ -1,11 +1,11 @@
 @echo off
 REM 管理者権限でコマンドプロンプトを開く
 if "%1"=="cmd" (
-	powershell  -Command start-process cmd -ArgumentList '/k %HOME%\bat\main.bat"'-verb runas
+	powershell  -Command start-process cmd -ArgumentList '/k main'-verb runas
 	exit /B
 )
 if "%1"=="su" (
-	powershell  -Command start-process cmd -ArgumentList '/k %HOME%\bat\main.bat"'-verb runas
+	powershell  -Command start-process cmd -ArgumentList '/k main'-verb runas
 	exit /B
 )
 if "%~x1"==".exe" (
