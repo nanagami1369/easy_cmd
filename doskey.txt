@@ -8,9 +8,9 @@ cat=type $*
 
 touch=wsl touch $*
 vim=wsl vim $*
-cp=wsl cp $*
-mv=wsl mv $*
-rm=wsl rm $*
+cp=powershell -c cp $*
+mv=powershell mv $*
+rm=powershell rm $*
 fish=wsl fish
 
 ad=pushd $*
