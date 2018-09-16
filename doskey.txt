@@ -1,6 +1,6 @@
-ls=powershell -c Get-ChildItem $*
-ll=powershell -c Get-ChildItem $*
-la=powershell -c Get-ChildItem -Force $*
+ls=powershell -NoProfile Get-ChildItem $*
+ll=powershell -NoProfile Get-ChildItem $*
+la=powershell -NoProfile Get-ChildItem -Force $*
 clear=cls
 
 pwd=echo %CD%
