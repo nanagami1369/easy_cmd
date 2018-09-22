@@ -1,6 +1,6 @@
-ls=powershell -NoProfile Get-ChildItem $*
-ll=powershell -NoProfile Get-ChildItem $*
-la=powershell -NoProfile Get-ChildItem -Force $*
+ls=dir /W
+ll=dir
+la=dir /A
 clear=cls
 
 pwd=echo %CD%
