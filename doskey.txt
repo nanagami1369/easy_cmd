@@ -15,7 +15,7 @@ fish=wsl fish
 
 ad=pushd $*
 add=popd $*
-~=pushd %HOME%\bat
+~=pushd %OneDrive%\vscode\bat
 ..=pushd ..
 
 exp=explorer $*
