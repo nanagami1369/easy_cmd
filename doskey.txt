@@ -1,6 +1,6 @@
-ls=dir /W
-ll=dir
-la=dir /A
+ls=dir /W $*
+ll=dir $*
+la=dir /A $*
 clear=cls
 
 pwd=echo %CD%
