@@ -6,7 +6,6 @@ clear=cls
 pwd=echo %CD%
 cat=type $*
 
-touch=wsl touch $*
 vim=wsl vim $*
 cp=powershell -NoProfile cp $*
 mv=powershell -NoProfile mv $*
@@ -19,3 +18,5 @@ add=popd $*
 ..=pushd ..
 
 exp=explorer $*
+
+touch=powershell -NoProfile touch_powershell.ps1 $*
