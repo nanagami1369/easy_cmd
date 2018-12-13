@@ -6,11 +6,9 @@ clear=cls
 pwd=echo %CD%
 cat=type $*
 
-vim=wsl vim $*
 cp=powershell -NoProfile cp $*
 mv=powershell -NoProfile mv $*
 rm=powershell -NoProfile rm $*
-fish=wsl fish
 
 ad=pushd $*
 add=popd $*
