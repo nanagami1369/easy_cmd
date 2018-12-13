@@ -10,8 +10,6 @@ cp=powershell -NoProfile cp $*
 mv=powershell -NoProfile mv $*
 rm=powershell -NoProfile rm $*
 
-ad=pushd $*
-add=popd $*
 ~=pushd %HOME%
 ..=pushd ..
 
