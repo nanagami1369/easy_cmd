@@ -9,10 +9,9 @@ cat=type $*
 cp=powershell -NoProfile cp $*
 mv=powershell -NoProfile mv $*
 rm=powershell -NoProfile rm $*
+touch=powershell -NoProfile touch_powershell.ps1 $*
 
 ~=pushd %HOME%
 ..=pushd ..
 
 exp=explorer $*
-
-touch=powershell -NoProfile touch_powershell.ps1 $*
