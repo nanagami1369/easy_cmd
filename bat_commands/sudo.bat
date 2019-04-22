@@ -8,6 +8,7 @@ if "%1"=="su" (
     powershell  -NoProfile start-process cmd -ArgumentList '/k easy "&" ""cd /d %CD%""'-verb runas
     exit /B
 )
+REM [.exe]がついていた場合はアプリ自体を環境変数で起動するように変更
 if "%~x1"==".exe" (
     powershell -NoProfile Start-Process %1 -ArgumentList '"%2" "%3" "%4" "%5" "%6" "%7" "%8" "%9" ' -Verb Runas
     exit /B
