@@ -14,7 +14,7 @@ if "%1"=="posh" (
     exit /B
 )
 if "%1"=="pwsh" (
-    powershell  -NoProfile start-process pwsh.exe -verb runas
+    powershell  -NoProfile start-process pwsh.exe -ArgumentList '" -WorkingDirectory ~"' -verb runas
     exit /B
 )
 REM [.exe]がついていた場合はアプリ自体を環境変数で起動するように変更
