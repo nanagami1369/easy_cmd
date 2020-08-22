@@ -14,7 +14,7 @@ if "%1"=="posh" (
     exit /B
 )
 if "%1"=="pwsh" (
-    powershell  -NoProfile start-process pwsh.exe -ArgumentList '" -WorkingDirectory ~"' -verb runas
+    powershell  -NoProfile start-process pwsh.exe -ArgumentList '" -WorkingDirectory" "%CD%"' -verb runas
     exit /B
 )
 REM [.exe]がついていた場合はアプリ自体を環境変数で起動するように変更
@@ -24,7 +24,7 @@ if "%~x1"==".exe" (
 )
 REM コマンドはcmd.exeに流して実行
 if not "%1"=="" (
-    powershell -NoProfile Start-Process cmd -ArgumentList '/K ""cd /d %CD%"" "&" "easy" "&" "%1" "%2" "%3" "%4" "%5" "%6" "%7" "%8" "%9" ' -Verb Runas
+    powershell -NoProfile Start-Process cmd -ArgumentList '/k ""cd /d %CD%"" "&" "easy" "&" "%*"' -Verb Runas
 ) else (
     rem 引数がなければエラーを返す
     echo コマンド構文が間違っています

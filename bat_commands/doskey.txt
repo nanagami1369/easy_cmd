@@ -4,7 +4,7 @@ la=dir /A $*
 clear=cls
 
 pwd=echo %CD%
-cat=type $*
+cat=bat $*
 
 cp=powershell -NoProfile cp $*
 mv=powershell -NoProfile mv $*
