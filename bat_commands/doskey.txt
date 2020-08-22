@@ -13,5 +13,5 @@ touch=powershell -NoProfile touch_powershell.ps1 $*
 
 ~=pushd %HOME%
 ..=pushd ..
-
+cd=pushd $*
 exp=explorer $*
