@@ -1,5 +1,5 @@
 @echo off
-REM ŠÇ—ÒŒ ŒÀ‚ÅƒRƒ}ƒ“ƒhƒvƒƒ“ƒvƒg‚ğŠJ‚­
+REM ç®¡ç†è€…æ¨©é™ã§ã‚³ãƒãƒ³ãƒ‰ãƒ—ãƒ­ãƒ³ãƒ—ãƒˆã‚’é–‹ã
 if "%1"=="cmd" (
     powershell  -NoProfile start-process cmd -ArgumentList '/k easy "&" ""cd /d %CD%""'-verb runas
     exit /B
@@ -8,7 +8,7 @@ if "%1"=="su" (
     powershell  -NoProfile start-process cmd -ArgumentList '/k easy "&" ""cd /d %CD%""'-verb runas
     exit /B
 )
-REM ŠÇ—ÒŒ ŒÀ‚ÅPowerShell‚ğ‹N“®‚·‚éƒRƒ}ƒ“ƒh
+REM ç®¡ç†è€…æ¨©é™ã§PowerShellã‚’èµ·å‹•ã™ã‚‹ã‚³ãƒãƒ³ãƒ‰
 if "%1"=="posh" (
     powershell  -NoProfile start-process powershell.exe -verb runas
     exit /B
@@ -17,17 +17,17 @@ if "%1"=="pwsh" (
     powershell  -NoProfile start-process pwsh.exe -ArgumentList '" -WorkingDirectory" "%CD%"' -verb runas
     exit /B
 )
-REM [.exe]‚ª‚Â‚¢‚Ä‚¢‚½ê‡‚ÍƒAƒvƒŠ©‘Ì‚ğŠÂ‹«•Ï”‚Å‹N“®‚·‚é‚æ‚¤‚É•ÏX
+REM [.exe]ãŒã¤ã„ã¦ã„ãŸå ´åˆã¯ã‚¢ãƒ—ãƒªè‡ªä½“ã‚’ç’°å¢ƒå¤‰æ•°ã§èµ·å‹•ã™ã‚‹ã‚ˆã†ã«å¤‰æ›´
 if "%~x1"==".exe" (
-    powershell -NoProfile Start-Process %1 -ArgumentList '"%2" "%3" "%4" "%5" "%6" "%7" "%8" "%9" ' -Verb Runas
+    powershell -NoProfile Start-Process "%*" -Verb Runas
     exit /B
 )
-REM ƒRƒ}ƒ“ƒh‚Ícmd.exe‚É—¬‚µ‚ÄÀs
+REM ã‚³ãƒãƒ³ãƒ‰ã¯cmd.exeã«æµã—ã¦å®Ÿè¡Œ
 if not "%1"=="" (
     powershell -NoProfile Start-Process cmd -ArgumentList '/k ""cd /d %CD%"" "&" "easy" "&" "%*"' -Verb Runas
 ) else (
-    rem ˆø”‚ª‚È‚¯‚ê‚ÎƒGƒ‰[‚ğ•Ô‚·
-    echo ƒRƒ}ƒ“ƒh\•¶‚ªŠÔˆá‚Á‚Ä‚¢‚Ü‚·
-    echo sudo [Às‚·‚éƒRƒ}ƒ“ƒh][Às‚·‚éƒRƒ}ƒ“ƒh‚É‚Â‚¯‚éˆø”]
+    rem å¼•æ•°ãŒãªã‘ã‚Œã°ã‚¨ãƒ©ãƒ¼ã‚’è¿”ã™
+    echo ã‚³ãƒãƒ³ãƒ‰æ§‹æ–‡ãŒé–“é•ã£ã¦ã„ã¾ã™
+    echo sudo [å®Ÿè¡Œã™ã‚‹ã‚³ãƒãƒ³ãƒ‰][å®Ÿè¡Œã™ã‚‹ã‚³ãƒãƒ³ãƒ‰ã«ã¤ã‘ã‚‹å¼•æ•°]
     exit /B
 )
