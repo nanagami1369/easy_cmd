@@ -1,16 +1,15 @@
 @echo off
-REM cmd.exeÉÇÝÜšét@C
+REM file is read to cmd.exe
 setlocal
 set green=[32;1m
 set default=[0m
 
-REM ĽAś
-echo %green%Welcome to my cmd.exe%default%
+REM hello world
 
-REM Ýčt@C(˝žĚob`t@C)đÇÝŢ
+REM read local setting file
 call setting_cmd.bat
 
-REM GCAXt@C
+REM alias
 doskey /macrofile=%HOME%/bat_commands/doskey.txt
 endlocal
 REM prompt
