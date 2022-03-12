@@ -1,15 +1,17 @@
 @echo off
-REM cmd.exe‚É“Ç‚İ‚Ü‚¹‚éƒtƒ@ƒCƒ‹
+REM cmd.exeÂ‚Ã‰Â“Ã‡Â‚ÃÂÂÂ‚ÃœÂ‚Å¡Â‚Ã©ÂƒtÂƒ@ÂƒCÂƒÂ‹
 setlocal
 set green=[32;1m
 set default=[0m
 
-REM ˆ¥A•¶
+REM ÂˆÄ½ÂAÂ•Å›
 echo %green%Welcome to my cmd.exe%default%
 
-REM İ’èƒtƒ@ƒCƒ‹(‚½‚¾‚Ìƒoƒbƒ`ƒtƒ@ƒCƒ‹)‚ğ“Ç‚İ‚Ş
+REM ÂÃÂ’ÄÂƒtÂƒ@ÂƒCÂƒÂ‹(Â‚ËÂ‚Å¾Â‚ÄšÂƒoÂƒbÂƒ`ÂƒtÂƒ@ÂƒCÂƒÂ‹)Â‚Ä‘Â“Ã‡Â‚ÃÂÂÂ‚Å¢
 call setting_cmd.bat
 
-REM ƒGƒCƒŠƒAƒXƒtƒ@ƒCƒ‹
+REM ÂƒGÂƒCÂƒÂŠÂƒAÂƒXÂƒtÂƒ@ÂƒCÂƒÂ‹
 doskey /macrofile=%HOME%/bat_commands/doskey.txt
 endlocal
+REM prompt
+PROMPT $E[32;1m$P$E[0m$G
